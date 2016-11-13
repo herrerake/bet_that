@@ -1,25 +1,7 @@
 Rails.application.routes.draw do
-  root to: 'event#index'
+  root to: 'events#index'
 
-  resources :events do
-    resources :awards
-  end
+resources :events, only: [:index, :show, :edit, :new]
+resources :awards, only: [:index, :show, :edit, :new]
 
-  # get 'award/index'
-  #
-  # get 'award/show'
-  #
-  # get 'award/new'
-  #
-  # get 'award/edit'
-  #
-  # get 'event/index'
-  #
-  # get 'event/show'
-  #
-  # get 'event/new'
-  #
-  # get 'event/edit'
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
