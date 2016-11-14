@@ -1,2 +1,31 @@
-<h1>Event#edit</h1>
-<p>Find me in app/views/event/edit.html.erb</p>
+<h1>Edit Event</h1>
+
+<%= form_for :event, url: event_path(@event),
+method: :path do |f| %>
+
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :reason %><br>
+    <%= f.text_field :reason %>
+  </p>
+
+  <p>
+    <%= f.label :award %><br>
+    <%= f.text_field :award %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </P>
+  <% end %>
+
+  <%= form_for @event, method: :delete do |f| %>
+    <%= f.submit "Delete!", class: "delete" %>
+
+<% end %>
+
+<%= link_to 'Back', events_path %>
