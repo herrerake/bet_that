@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   root to: 'events#index'
 
-resources :events
-resources :awards 
+  resources :events do
+    resources :awards
+  end
 
 end

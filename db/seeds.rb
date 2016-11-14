@@ -8,3 +8,7 @@
 
 Event.destroy_all
 Award.destroy_all
+
+Event.create([
+  {name: "Jackie", award: "pumpkin pie", reason: "couldn't lick her elbow"}
+  ])

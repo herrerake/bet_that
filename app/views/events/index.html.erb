@@ -1,16 +1,15 @@
 <h1>You Owe Me </h1>
 <h2>
-  <%= link_to "You Owe Me", new_event_path %>
+  <%= link_to "(+)", new_event_path %>
 </h2>
 
 <div>
   <% @events.each do |event| %>
     <tr>
       <td><%= event.name %></td>
-      <td><%= event.award %></td>
       <td><%= event.reason %></td>
-      <td><%= link_to 'show', event_path(event) %></td>
-      <td><%= link_to 'delete', event_path(event), method: :delete, data: { confirm: 'Are you sure?'} %></td>
+      <td><%= event.award %></td>
+      <td><%= link_to 'Delete', event_path(event), method: :delete, data: { confirm: 'Are you sure?'} %> |<%= link_to 'Edit', edit_event_path(event) %></td><br>
     </tr>
   <% end %>
 </div>

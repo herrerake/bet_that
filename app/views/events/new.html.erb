@@ -3,23 +3,23 @@
 <%= form_for @event do |f| %>
 
 <div>
-  <%= f.label :Who %>
+  <%= f.label :who %>
   <%= f.text_field :name %>
 </div>
 
 <div>
-  <%= f.label :For_what %>
+  <%= f.label :reason %>
   <%= f.text_field :reason %>
 </div>
 
-<div>
+<div class ="emoji-picker-container">
   <%= f.label :award %>
-  <%= f.text_field :award %>
+  <%= f.text_field :award, data: { emojiable: true } %>
 </div>
 
 <div>
   <%= f.submit %>
 </div>
 
-<%= link_to 'back', events_path %>
 <% end %>
+<%= link_to 'back', events_path %>
