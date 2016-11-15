@@ -1,8 +1,33 @@
+<p>
+  <strong>Who:</strong>
+  <%= @event.name %>
+</p>
 
-<%= link_to 'Edit', edit_event_path(@event) %>
+<p>
+  <strong>For What:</strong>
+  <%= @event.reason %>
+</p>
+
+<h2>Have Something to Say? </h2>
+<%= form_for([@event, @comment]) do |f| %>
+<%= f.label :Enter_Here %><br>
+<p class="emoji-picker-container">
+  <%= f.text_field :body, data: { emojiable: true } %>
+</p>
+
+<p>
+  <%= f.submit %>
+</p>
+<% end %>
+
 <%= link_to 'Back', events_path %>
 
-Right here will show:
-
-"@user" "owes me" for "reason"
-in a newsfeed type method
+<h2>Comments</h2>
+<% @event.comments.each do |comment| %>
+<p>
+  <%= comment.body %>
+  <%= link_to 'Delete Comment', [comment.event, comment],
+  method: :delete,
+  data: {confirm: "Are you sure"} %>
+</p>
+<% end %>
