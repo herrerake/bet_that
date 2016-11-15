@@ -1,3 +1,67 @@
 // Place all the styles related to the Event controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//events index.html styling
+body{
+  margin: 0;
+  background-image: url("blackboard.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Cabin Sketch', cursive;
+}
+
+h1{
+  text-align: center;
+  color: #ffffff;
+  font-size: 100px;
+}
+
+h2{
+  text-align: center;
+  font-family: 'Cabin Sketch', cursive;
+}
+
+.feed{
+  text-align: center;
+  // font-family: 'Cabin Sketch', cursive;
+  color: #ffffff;
+  font-size: 33px;
+}
+
+// events new.html & edit.html styling
+
+.new_form{
+  // font-family: 'Cabin Sketch', cursive;
+  text-align: center;
+  font-size: 33px;
+  color: #ffffff;
+}
+
+.back{
+  text-align: center;
+  font-size: 25px;
+  // font-family: 'Cabin Sketch', cursive;
+}
+
+// event show.html styling
+
+.event{
+  text-align: center;
+  font-size: 33px;
+  color: #ffffff;
+}
+
+h3{
+  text-align: center;
+  font-size: 25px;
+  color: rgb(249, 0, 0)
+}
+
+.comments{
+  text-align: center;
+}
+
+.emoji-field{
+  background-color: white;
+}

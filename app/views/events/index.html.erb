@@ -1,15 +1,15 @@
-<h1>You Owe Me An Emoji</h1>
+<h1>Emoji Blockchain</h1>
 <h2>
-  <%= link_to "Collect New Emoji", new_event_path %>
+  <%= link_to "Click here to add an emoji to the blockchain", new_event_path %>
 </h2>
 
-<div>
+<div class="feed">
   <% @events.each do |event| %>
     <tr>
       <td><%= event.name %></td>
       <td><%= event.reason %></td>
       <td><%= event.award %></td>
-      <td><%= link_to 'Edit', edit_event_path(event) %> | <%= link_to 'Delete', event_path(event), method: :delete, data: { confirm: 'Are you sure?'} %> | <%= link_to 'Comments', event_path(event) %></td><br>
+      <td><%= link_to 'Edit', edit_event_path(event) %>|<%= link_to 'Delete', event_path(event), method: :delete, data: { confirm: 'Are you sure?'} %> | <%= link_to 'Comments', event_path(event) %></td><br>
     </tr>
   <% end %>
 </div>

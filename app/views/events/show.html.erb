@@ -1,33 +1,47 @@
-<p>
-  <strong>Who:</strong>
-  <%= @event.name %>
-</p>
+<h1>Comments</h1>
 
-<p>
-  <strong>For What:</strong>
-  <%= @event.reason %>
-</p>
+<div class="event">
+  <p>
+    <strong>Who:</strong>
+    <%= @event.name %>
+  </p>
 
-<h2>Have Something to Say? </h2>
-<%= form_for([@event, @comment]) do |f| %>
-<%= f.label :Enter_Here %><br>
-<p class="emoji-picker-container">
-  <%= f.text_field :body, data: { emojiable: true } %>
-</p>
+  <p>
+    <strong>For What:</strong>
+    <%= @event.reason %>
+  </p>
 
-<p>
-  <%= f.submit %>
-</p>
-<% end %>
+  <p>
+    <strong>Emoji:</strong>
+    <%= @event.award %>
+  </p>
+</div>
 
-<%= link_to 'Back', events_path %>
+<div class="back">
+  <%= link_to 'Back', events_path %>
+</div>
 
-<h2>Comments</h2>
-<% @event.comments.each do |comment| %>
-<p>
-  <%= comment.body %>
-  <%= link_to 'Delete Comment', [comment.event, comment],
-  method: :delete,
-  data: {confirm: "Are you sure"} %>
-</p>
-<% end %>
+<h3>Have Something to Say? </h3>
+
+<div class="comments">
+  <%= form_for([@event, @comment]) do |f| %>
+    <%= f.label :Enter_Here %><br>
+  <p class="emoji-picker-container">
+    <%= f.text_field :body, data: { emojiable: true } %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+  <% end %>
+
+  <h2>Comments</h2>
+  <% @event.comments.each do |comment| %>
+  <p>
+    <%= comment.body %>
+    <%= link_to 'Delete Comment', [comment.event, comment],
+    method: :delete,
+    data: {confirm: "Are you sure"} %>
+  </p>
+  <% end %>
+</div>
