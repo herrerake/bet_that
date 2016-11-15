@@ -1,4 +1,4 @@
-class AwardsController < ApplicationController
+class CommentsController < ApplicationController
   def index
   end
 

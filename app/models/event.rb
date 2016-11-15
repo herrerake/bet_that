@@ -1,3 +1,3 @@
 class Event < ApplicationRecord
-  has_many :awards
+  has_many :comments
 end

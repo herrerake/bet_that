@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Event.destroy_all
-Award.destroy_all
+Comment.destroy_all
 
 Event.create([
-  {name: "Jackie", award: "pumpkin pie", reason: "couldn't lick her elbow"}
+  {name: "Jackie", award: "pumpkin pie", reason: "failed driving test"}
   ])
