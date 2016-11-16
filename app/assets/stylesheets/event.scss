@@ -22,11 +22,22 @@ h2{
   font-family: 'Cabin Sketch', cursive;
 }
 
+.description{
+  margin-top: -20px;
+}
+
 .feed{
   text-align: center;
-  // font-family: 'Cabin Sketch', cursive;
   color: #ffffff;
   font-size: 33px;
+}
+
+.name{
+  color: rgba(#d91616, 0.78)
+}
+
+.reason{
+  color: rgba(#90ed88, 0.88);
 }
 
 // events new.html & edit.html styling
@@ -62,6 +73,7 @@ h3{
   text-align: center;
 }
 
-.emoji-field{
+.text-box{
   background-color: white;
+  color: black;
 }

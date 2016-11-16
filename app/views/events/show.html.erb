@@ -27,7 +27,7 @@
   <%= form_for([@event, @comment]) do |f| %>
     <%= f.label :Enter_Here %><br>
   <p class="emoji-picker-container">
-    <%= f.text_field :body, data: { emojiable: true } %>
+    <%= f.text_field :body, class:"text-box", data: { emojiable: true } %>
   </p>
 
   <p>
