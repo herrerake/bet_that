@@ -19,18 +19,24 @@
       <%= link_to "Sign In", new_session_path %>
       <% end %>
 
-      <%= form_for @user do |f| %>
+      <%= form_for @user, url: session_path, method: :post do |f| %>
         <%= f.label :username %>
         <%= f.text_field :username %>
 
         <%= f.label :password %>
         <%= f.password_field :password %>
 
-        <%= f.submit "submit", :class => "button" %>
+        <%= f.submit "Submit", :class => "button" %>
       <% end %>
+
       <br>
       <!-- <%= link_to "Users", users_path %> -->
     </nav>
+
+    <% flash.each do |type, message| %>
+      <p class="<%= type %>"><%= message %></p>
+    <% end %>
+    
     <%= yield %>
   </body>
 </html>

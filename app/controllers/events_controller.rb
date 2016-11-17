@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   def index
-    @events = Event.all
+    @events = @current_user.events
     @user = User.new
   end
 
@@ -18,7 +18,7 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = Event.create!(event_params)
+    @event = @current_user.events.create!(event_params)
     @event.save
     redirect_to events_path
   end

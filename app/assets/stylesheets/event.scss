@@ -17,14 +17,13 @@
 
 // links styling
 a {
-    color: hotpink;
+  color: hotpink;
 }
 
 /* mouse over link */
 a:hover {
-    color: pink;
+  color: pink;
 }
-
 
 //events index.html styling
 body{
@@ -109,4 +108,17 @@ h5{
 
 .users{
   text-align: center;
+}
+
+//alerts & notices
+.alert{
+  color: #ff0000;
+  text-align: center;
+  font-size: 25px;
+}
+
+.notice{
+  color: #00ff00;
+  text-align: center;
+  font-size: 25px;
 }

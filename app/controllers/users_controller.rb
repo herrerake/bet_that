@@ -6,11 +6,17 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+    @user.errors.full_messages.first
   end
 
   def create
     @user = User.create(user_params)
-    redirect_to events_path
+    if @user.save
+      flash[:notice] = "User was successfully created."
+      redirect_to events_path
+    else
+      render :show
+    end
   end
 
   def show

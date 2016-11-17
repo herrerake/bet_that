@@ -1,7 +1,9 @@
 <h1>Emoji Keeper 3000</h1>
 <h2 class="description">Keep track of the emojis your friends owe you.</h2>
 <h2>
-  <%= link_to "Add new emoji", new_event_path %>
+  <% if @current_user %>
+  <%= link_to("Add new emoji", new_event_path(@event)) %>
+  <%end%>
 </h2>
 
 <table align="center" class="feed">
@@ -10,7 +12,7 @@
       <td class="name"><%= event.name %></td>
       <td class="reason"><%= event.reason %></td>
       <td class="award"><%= event.award %></td>
-      <td><%= link_to 'Edit', edit_event_path(event) %> | <%= link_to 'Delete', event_path(event), method: :delete, data: { confirm: 'Are you sure?'} %> | <%= link_to 'Comments', event_path(event) %></td>
+      <td><%= link_to'Edit', edit_event_path(event) %> | <%= link_to 'Delete', event_path(event), method: :delete, data: { confirm: 'Are you sure?'} %> | <%= link_to 'Comments', event_path(event) %></td>
     </tr>
   <% end %>
 </table>

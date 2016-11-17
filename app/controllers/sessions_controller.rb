@@ -13,24 +13,24 @@ class SessionsController < ApplicationController
 
       # If the password submitted through the form is correct...
       if @user.password == params[:user][:password]
-        puts "You're signed in!"
+        flash[:notice] = "You're signed in!"
         session[:user_id] = @user.id  # Set the session user_id to that of the user trying to log in
         redirect_to events_path   # Send them back to the app
       else
-        puts "Wrong password!"
+        flash[:alert] = "Wrong password or Username!"
         redirect_to new_session_path  # Send them back to the sign-in form
       end
 
     # Otherwise, send them back to the sign-in form so they can enter a valid username-password combination
     else
-      puts "That user doesn't exist!"
+      flash[:alert] = "That user doesn't exist!"
       redirect_to new_session_path
     end
   end
 
   def destroy
     reset_session   # Delete all sessions
-    puts "You're signed out!"
+    flash[:alert] = "You're signed out!"
     redirect_to events_path   # Send the user back to the homepage
   end
 
