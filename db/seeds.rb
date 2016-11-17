@@ -10,5 +10,5 @@ Event.destroy_all
 Comment.destroy_all
 
 Event.create([
-  {name: "Jackie", award: "pumpkin pie", reason: "failed driving test"}
+  {name: "Jackie", award: ":pizza", reason: "failed driving test"}
   ])

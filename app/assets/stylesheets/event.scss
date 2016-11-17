@@ -2,6 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+//layout application.html.erb
+.button {
+  font-size: 1em;
+  color: blue;
+}
+
+.navi{
+  color: lightgreen;
+  text-align: right;
+  margin-right: 50px;
+  margin-top: 30px;
+}
+
+// links styling
+a {
+    color: hotpink;
+}
+
+/* mouse over link */
+a:hover {
+    color: pink;
+}
+
+
 //events index.html styling
 body{
   margin: 0;
@@ -22,6 +46,18 @@ h2{
   font-family: 'Cabin Sketch', cursive;
 }
 
+h3{
+  text-align: center;
+  font-size: 25px;
+  color: rgb(249, 0, 0)
+}
+
+h5{
+  color: lightgreen;
+  font-size: 20px;
+  margin-bottom: -1px;
+}
+
 .description{
   margin-top: -20px;
 }
@@ -33,7 +69,7 @@ h2{
 }
 
 .name{
-  color: rgba(#d91616, 0.78)
+  color: rgba(35, 79, 233, 0.87);
 }
 
 .reason{
@@ -43,7 +79,6 @@ h2{
 // events new.html & edit.html styling
 
 .new_form{
-  // font-family: 'Cabin Sketch', cursive;
   text-align: center;
   font-size: 33px;
   color: #ffffff;
@@ -52,9 +87,12 @@ h2{
 .back{
   text-align: center;
   font-size: 25px;
-  // font-family: 'Cabin Sketch', cursive;
 }
 
+.text-box{
+  background-color: white;
+  color: black;
+}
 // event show.html styling
 
 .event{
@@ -63,17 +101,12 @@ h2{
   color: #ffffff;
 }
 
-h3{
-  text-align: center;
-  font-size: 25px;
-  color: rgb(249, 0, 0)
-}
-
 .comments{
   text-align: center;
 }
 
-.text-box{
-  background-color: white;
-  color: black;
+//user styling
+
+.users{
+  text-align: center;
 }
