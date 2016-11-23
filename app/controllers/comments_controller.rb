@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+
+  # think you don't need index and show
   def index
   end
 
@@ -18,6 +20,8 @@ class CommentsController < ApplicationController
   end
 
   def edit
+    # add this here
+    # @event = Event.find(params[:event_id])
   end
 
   def destroy
