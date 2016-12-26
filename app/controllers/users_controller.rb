@@ -11,6 +11,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(user_params)
+    binding.pry
     if @user.save
       flash[:notice] = "User was successfully created."
       redirect_to events_path
