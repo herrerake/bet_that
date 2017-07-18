@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-
+  # nice hand-rolled users and sessions  
   def new
     @user = User.new
   end

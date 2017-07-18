@@ -1,11 +1,18 @@
 class UsersController < ApplicationController
 
+  # you can dry up this controller with the following code block
+  # before_action :set_user, except: [:index, :new, :create]
+  # def set_user
+  #     @user = User.find(params[:id])
+  # end
+
   def index
     @users = User.all
   end
 
   def new
     @user = User.new
+    # I would display these in views
     @user.errors.full_messages.first
   end
 

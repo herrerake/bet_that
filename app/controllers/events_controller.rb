@@ -1,9 +1,10 @@
 class EventsController < ApplicationController
+  
   def index
     if @current_user
-    @events = @current_user.events
+      @events = @current_user.events
     else
-    @events = Event.all
+      @events = Event.all
     end
     @user = User.new
   end
